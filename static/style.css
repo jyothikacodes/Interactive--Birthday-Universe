@@ -1,0 +1,237 @@
+/* 🌌 Global */
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+}
+
+/* 🌌 Stars */
+#stars {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.85;
+}
+
+/* 🌠 Content Wrapper */
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 10vh 20px 5vh;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* 🎂 Title */
+.title {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    animation: fadeIn 2s forwards;
+}
+
+/* 🌕 Moon */
+.moon-container {
+    margin: 30px auto 50px;
+    animation: fadeIn 3s forwards;
+}
+
+.moon{
+    position:relative;
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    background:#f5f5f5;
+    box-shadow:0 0 20px rgba(255,255,255,0.2);
+    overflow:hidden;
+}
+
+.moon::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: var(--phase);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: #0b0b0b;
+    box-shadow: inset -10px 0 20px rgba(0,0,0,0.6);
+}
+
+
+.moon-text {
+    margin-top: 12px;
+    opacity: 0.75;
+    font-size: 0.95rem;
+}
+
+/* 🌟 Legends */
+.legends {
+    margin-top: 40px;
+    opacity: 0;
+    animation: fadeIn 4s forwards;
+}
+
+.legends h2 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+
+.legend-line {
+    margin: 10px 0;
+    opacity: 0.9;
+}
+
+.final-legend {
+    margin-top: 18px;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+/* 🔮 Fortune */
+.fortune-section {
+    margin-top: 50px;
+}
+
+button {
+    padding: 10px 22px;
+    font-size: 1rem;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.fortune {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ❤️ Ending */
+.final-line {
+    margin-top: 60px;
+    font-size: 0.95rem;
+    opacity: 0.6;
+}
+
+.final-line span {
+    display: block;
+    margin-top: 8px;
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    /* 🌌 ENTRY PAGE */
+body.entry {
+    background: black;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.entry-container {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.entry-kicker {
+    font-size: 0.85rem;
+    opacity: 0.6;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.entry-title {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    animation: fadeIn 2s forwards;
+}
+
+.entry-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.75;
+    margin-bottom: 40px;
+}
+
+.entry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.date-input {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 12px 18px;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+.date-input:focus {
+    outline: none;
+    border-color: white;
+}
+
+.begin-btn {
+    padding: 12px 28px;
+    border-radius: 30px;
+    border: none;
+    background: white;
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.begin-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.entry-footer {
+    margin-top: 40px;
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+
+
